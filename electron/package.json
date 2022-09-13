@@ -1,0 +1,63 @@
+{
+  "name": "laoshan-taoist-priest",
+  "version": "1.0.0",
+  "author": {
+    "name": "SealOfFire",
+    "email": "sealoffire@hotmail.com"
+  },
+  "description": "崂山道士中的法术，名字灵感来自一部动画片",
+  "main": "./dist/main.js",
+  "scripts": {
+    "start": "tsc && electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "build": "tsc",
+    "start2": "tsc && electron ."
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "@types/uuid": "^8.3.4",
+    "electron": "^20.1.0",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "uuid": "^8.3.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon":"./assets/images/lan-connect3.png"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electron"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

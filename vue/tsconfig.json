@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "dist",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/vuetify/types"
+    ],
+  },
+  "paths": {
+    "@/*": [
+      "src/*",
+      "src/vue/*"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "src/_backup/**/*.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue"
+  ],
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
+}

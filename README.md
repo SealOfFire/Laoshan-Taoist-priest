@@ -1,2 +1,7 @@
 # Laoshan-Taoist-priest
 茅山法术
+
+拆分成了两个项目
+vue和electron是两个独立的项目。需要先执行vue的 npm run webpack_build，会打包vue项目到electron的pages文件加下。然后运行electron的npm run start可以启动项目。
+使用webpack打包，没有用vite，是因为vite生成的代码可以在浏览器中运行，但是在electron中运行会出错。webpack打包的结果在浏览器和electron中运行都不会出错。
+common是在vue和electron中同时需要使用的代码

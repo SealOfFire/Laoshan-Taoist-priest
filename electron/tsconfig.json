@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "esnext",
+    //"noImplicitAny": true,
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    //"resolveJsonModule": true,
+    "esModuleInterop": true,
+    //"isolatedModules": true,
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+    },
+    "lib": [
+      "esnext",
+      "dom"
+    ]
+  },
+  "paths": {
+    "@/*": [
+      "src/*",
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "pages",
+    "dist",
+    "base",
+    "vendor",
+    "electron.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}
